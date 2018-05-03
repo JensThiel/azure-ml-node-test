@@ -1,0 +1,100 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
+        title Predicter
+        link(rel='stylesheet', href='/css/screen.css')
+        form(action="/api/guess-income", method="post")
+          div
+            label(for="age") Age
+            input(type="number", name="age")
+          div
+            label(for="workclass") Workclass
+            select(name="workclass")
+              option(value="State-gov") State Gov
+              option(value="Self-emp-not-inc") Self Emp Not Inc
+              option(value="Private") Private
+              option(value="Federal-gov") Federal Gov
+              option(value="Self-emp-inc") Self Emp inc
+              option(value="Without-pay") Without pay
+              option(value="Never-worked") never worked
+          div
+            label(for="education") Education:
+            select(name="education") 
+              option(value="Bachelors") Bachelors
+              option(value="HS-grad") HS Grad
+              option(value="11th") 11th
+              option(value="Masters") Masters
+              option(value="9th") 9th
+              option(value="Some-college") Some college
+              option(value="Assoc-acdm") Assoc acdm
+              option(value="Assoc-voc") Assoc voc
+              option(value="7th-8th") 7th-8th
+              option(value="Doctorate") Doctorate
+              option(value="Prof-school") Prof school
+              option(value="5th-6th") 5th-6th
+              option(value="10th") 10th
+              option(value="1st-4th") 1st-4th
+              option(value="Preschool") Preschool
+              option(value="12th") 12th
+          div
+            label(for="maritalstatus") Marital Status:
+            select(name="maritalstatus") 
+              option(value="Never-married") Never Married
+              option(value="Married-civ-spouse") Married Civ Spouse
+              option(value="Divorced") Divorced
+              option(value="Married-spouse-absent") Married (Spouse Absent)
+              option(value="Separated") Separated
+              option(value="Married-AF-spouse") Married AF spouse
+              option(value="Widowed") Widowed
+          div
+            label(for="occupation") Occupation:
+            select(name="occupation") 
+              option(value="Adm-clerical") Adm Clerical
+              option(value="Exec-managerial") Exec managerial
+              option(value="Handlers-cleaners") Handlers cleaners
+              option(value="Prof-specialty") Prof Speciality
+              option(value="Other-service") Other Service
+              option(value="Sales") Sales
+              option(value="Craft-repair") Craft repair
+              option(value="Transport-moving") Transport
+              option(value="Farming-fishing") Farming fishing
+              option(value="Machine-op-inspct") Machine op inspct
+              option(value="Tech-support") Tech support
+              option(value="Protective-serv") Protective services
+              option(value="Armed-Forces") Armed Forces
+              option(value="Priv-house-serv") Private House services
+          div
+            label(for="relationship") Relationship:
+            select(name="relationship") 
+              option(value="Not-in-family") Not in Family
+              option(value="Husband") Husband
+              option(value="Wife") Wife
+              option(value="Own-child") Own Child
+              option(value="Unmarried") Unmarried
+              option(value="Other-relative") Other relative
+          div
+            label(for="race") Race:
+            select(name="race")
+              option(value="White") White
+              option(value="Black") Black
+              option(value="Asian-Pac-Islander") Asian Pac Islander
+              option(value="Amer-Indian-Eskimo") Amer Indian Eskimo
+              option(value="Other") Other
+          div
+            label(for="sex") Sex:
+            select(name="sex") 
+              option(value="Male") Male
+              option(value="Female") Female
+          div
+            label(for="hoursperweek") Hours per week:
+            input(type="number", name="hours-per-week")
+          div
+            label(for="nativecountry") Native country:
+            input(type="text", name="native-country")
+
+          input(type="submit", value="send")
+        script(src="/js/main.js")
+
+    
